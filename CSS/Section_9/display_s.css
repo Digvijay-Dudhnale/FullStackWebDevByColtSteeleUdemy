@@ -1,0 +1,23 @@
+h1{
+    background-color: aquamarine;
+    border: 2px solid rebeccapurple;
+    /* this make block elements behave like inline elements */
+    display: inline;
+}
+
+span{
+    background-color: red;
+    /* this make inline elements behave like block elements */
+    display: block;
+}
+
+div{
+    width: 300px;
+    height: 200px;
+    background-color: burlywood;
+    border: 3px solid black;
+    /* this make element behave like inline element with the exception of width,margin,padding and height  */
+    display: inline-block;
+
+    /* display: none; hide the element */
+}

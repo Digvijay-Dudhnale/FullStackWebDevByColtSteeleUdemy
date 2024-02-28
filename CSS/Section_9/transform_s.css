@@ -1,0 +1,50 @@
+h1{
+    background-color: #34a0a4;
+    border: 2px solid #27187e;
+    color: thistle;
+    padding: 0.7em;
+    width: 300px;
+    margin: 20px auto;
+    font-size: 1.8em;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+
+h1:nth-of-type(2n){
+    background-color: #76c893;
+}
+h1:nth-of-type(3n){
+    background-color: #758bfd;
+}
+h1:nth-of-type(4n){
+    background-color: #9f86c0;
+}
+
+section:hover:nth-of-type(1) h1:nth-of-type(2){
+    /* default origin of transformation is middle of the element */
+    /* transform-origin: bottom right; */
+    transform: rotate(45deg);
+}
+/* We can use 3d,x,y values  */
+/* input is angle */
+section:nth-of-type(2) h1:nth-child(3){ 
+    transform: rotate(45deg);
+}
+/* We can use 3d,x,y values  */
+/* input is int or float */
+section:nth-of-type(2) h1:nth-of-type(2){
+    transform: scale(0.9);
+}
+/* We can use 3d,x,y values  */
+/* input is px or any unit */
+section:nth-of-type(1) h1:nth-of-type(4){
+    transform: translate(200px,-30px);
+}
+/* We can use 3d,x,y values  */
+/* input is angle */
+section:nth-of-type(2) h1:nth-of-type(4){
+    transform: skew(50deg);
+}
+
+/* we can also apply all these transitions to same element in one line */

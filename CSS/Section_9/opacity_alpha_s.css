@@ -1,0 +1,24 @@
+section{
+    width: 600px;
+    height: 600px;
+    background-color: magenta;
+}
+
+#rgba{
+    border: 3px solid black;
+    width: 40%;
+    height: 40%;
+    margin: 10px;
+    /* alpah channel works specific to the element */
+    background-color: rgba(20, 150, 230, 0.5);
+}
+
+#opacity{
+    margin: 10px;
+    border: 3px solid black;
+    width: 60%;
+    height: 40%;
+    background-color: blueviolet;
+    /* opacity works for entire element including its childs */
+    opacity: 0.7;
+}

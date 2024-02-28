@@ -1,0 +1,82 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+#container {
+    background-color: #003049;
+    width: 90%;
+    /* height: 500px; */
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    
+    /* flex-direction: row; default */
+    flex-direction: row-reverse;
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    
+    /* justify-content: flex-start; default */
+    /* justify-content: flex-end; */
+    justify-content: space-around;
+    /* justify-content: space-around; */
+
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
+
+    /* align-items: flex-end; */
+    /* align-items: flex-start; default */
+    /* align-items: center; */
+    /* align-items: baseline; */
+
+    /* align-content: flex-end; */
+
+    
+}
+
+div:nth-of-type(1){
+    align-self: center;
+}
+    
+#container div{
+    height: 200px;
+    /* width: 600px; */
+    width: 200px;
+    flex-basis: 200px; 
+
+    /* max-width: 300px;
+    min-width: 300px;
+    min-height: 300px;
+    max-height: 300px; */
+}
+
+div:nth-of-type(1){
+    flex-grow: 1;
+}
+
+div:nth-of-type(3){
+    flex-shrink: 2;
+}
+
+main{
+    border: 2px solid black;
+    width: 80%;
+    height: 500px;
+    margin:0 auto;
+    display: flex;
+}
+
+main #sidebar{
+    background-color: #6c757d;
+    flex-grow: 1;
+}
+
+main #maincontent{
+    background-color: #343a40;
+    flex-grow: 1;
+
+    /* shorthand */
+    /* flex:flex_grow,flex_shrink,flex_basis ; */
+}
+

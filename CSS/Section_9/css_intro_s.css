@@ -1,0 +1,30 @@
+/* Color Properties */
+h1{
+    color: black; 
+    background-color: wheat;
+    /* background and background-color are different */
+}
+p{
+    color: rgb(34, 100, 80);
+    background-color: brown;
+}
+button{
+    color: tomato;
+    background-color: #1f56f1;
+}
+
+/* Text Properties */
+h1{
+    text-align: center; 
+    font-weight: normal;
+    text-decoration: orange wavy underline; 
+    letter-spacing: 3px;
+    font-size: 80px;
+    /* font-family: Arial , fantasy, sans-serif , sans ; */
+    font-family: fantasy;
+}
+p{
+    text-decoration: underline;
+    /* text-decoration: none; */
+    line-height: 2;
+}

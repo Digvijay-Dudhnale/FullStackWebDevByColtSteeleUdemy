@@ -1,0 +1,73 @@
+h1{
+    width: 200px;
+    background-color: brown;
+    border-color: black;
+    border-width: 4px;
+    border-style: solid;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    /* top-right-bottom-left */
+    padding: 30px 30px 30px 30px;
+}
+
+div{
+    width: 400px;
+    height: 200px;
+    background-color: blueviolet;
+}
+
+#one{
+    background-color: #dc2f02;
+    border-color: #a8dadc;
+    border-width: 6px;
+    border-style: solid;
+    /* box-sizing: border-box; */
+    margin: 20px;
+}
+
+#two{
+    background-color: #9d0208;
+    border-color: #457b9d;
+    border-width: 6px;
+    border-radius: 50%;
+    border-style: dashed;
+    margin: 30px;
+}
+
+#three{
+    background-color: #6a040f;
+    border-color: #1d3557;
+    border-width: 6px;
+    border-style: dotted;
+    /* BORDER SHORTHAND */
+    /* border_side_property   top right bottom left*/ 
+    /* border: width | style | color ; */
+    border-radius: 10px;
+    margin: 40px;
+}
+
+#pad{
+    background-color: aquamarine;
+    /* all four sides */
+    padding: 30px;
+    /* vertical | horizontal */
+    padding: 20px 40px;
+    /* top | horizontal | bottom  */
+    padding: 30px 50px 70px;
+    /* top-right-bottom-left */
+    padding: 30px 30px 30px 30px;
+}
+
+#marg{
+    background-color: aquamarine;
+    /* all four sides */
+    margin: 30px;
+    /* vertical | horizontal */
+    margin: 20px 40px;
+    /* top | horizontal | bottom  */
+    margin: 30px 50px 70px;
+    /* top-right-bottom-left */
+    margin: 30px 30px 30px 30px;
+}

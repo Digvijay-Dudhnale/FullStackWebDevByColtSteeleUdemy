@@ -1,0 +1,93 @@
+/* Universal Selector */
+*{
+    color: orange;
+}
+
+/* Element Selector */
+section{
+    background-color: #eae2b7;
+}
+span{
+    color: hotpink;
+}
+
+button{
+    font-size: 20px;
+    background-color: #00b4d8;
+}
+
+/* Selector List */
+h1,h2{
+    color: black;
+}
+
+/* ID Selectors */
+#signup{
+    background-color: blueviolet;
+    color: black;
+}
+
+/* Class Selector */
+.tag{
+    background-color: #5e548e;
+    color: #ffcad4;
+}
+
+/* Descendent Selector */
+span a{
+    color: hotpink;
+    /* text-decoration: none; */
+}
+.post a{
+    color: hotpink;
+}
+footer a{
+    color: red;
+}
+
+/* Adjacent Selector */
+input+button{
+    background-color: #5e548e;
+}
+h2+button{
+    font-size: 30px;
+    font-family: serif;
+}
+
+/* Direct Descendent Selector */
+footer>a{
+    background-color: orchid;
+    color: honeydew;
+}
+
+/* Attribute Selector */
+input[type="password"] {
+    color: green;
+    /* background-color: orange; */
+}
+
+
+/* Pseudo Classes */
+.post button:hover {
+    color:aliceblue;
+    background-color: red;
+}
+
+.post button:active{
+    background-color: greenyellow;
+}
+
+/* Pseudo Elements */
+h2::first-letter{
+    font-size: 40px;
+}
+
+p::first-line{
+    color: palegreen;
+}
+
+p::selection{
+    background-color: #5e548e;
+}
+
+/* CSS Cascade ->> The order in which elements are styled matters */

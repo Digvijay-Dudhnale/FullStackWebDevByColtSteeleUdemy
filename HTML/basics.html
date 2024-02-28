@@ -1,0 +1,262 @@
+<!-- HTML BoilerPlate -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic of HTML</title>
+</head>
+
+<body>
+    <!-- paragraphs and bolds -->
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam excepturi laborum vel omnis quae sed earum aut
+    aliquam, voluptates voluptatum dolores, <b>opening tag used bold element closing tag</b>
+    <p><b> opening tag paragraph</b> element voluptate eum eveniet! Fuga repellendus totam ex corrupti repellat! Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Laborum, at ducimus iure a saepe deserunt quaerat ipsam ab ad
+        deleniti aperiam commodi in impedit fugiat itaque officiis dolorem quos, doloribus explicabo nesciunt <b>closing
+            tag</b></p> similique eligendi consequatur veniam. Deserunt, debitis molestiae vitae nostrum architecto
+    accusantium quaerat beatae, error necessitatibus dolore eligendi, similique ex nisi mollitia? Atque debitis suscipit
+    explicabo architecto, enim deleniti.
+
+    <!-- list elements -->
+    <ul>
+        <li>ch
+            <ol>
+                <li>chi</li>
+                <li>chu</li>
+                <li>cha</li>
+            </ol>
+        </li>  
+    </ul>
+    <ol>
+        <li>chi</li>
+        <li>chu</li>
+        <li>cha</li>
+    </ol>
+
+    <!-- headings -->
+    <h1>opening tag heading element closing tag</h1>
+    <h2>h2 , h3 , h4 , h5 , h6 </h2>
+
+    <!-- anchor tag for hyperlinks -->
+    <a href="https://google.com"> Google</a>
+
+    <!-- image element -->
+    <img src="bg1.jpg" alt="Background imgae" width="300px">
+
+    <!-- div and span are used as containers -->
+    <!-- div element block element -->
+    <div></div>
+    <!-- span element inline element -->
+    <span></span>
+
+    <!-- hr -> to insert horizontal line
+    br -> to break the line
+    sup -> to elevate text above base line
+    sub -> to show text below base line -->
+
+    <!-- HTML Entities ,,,, starts with & and ends with ; -->
+    <h1>1 &lt; 7 &gt; 5</h1>    
+
+    <!-- Semantic Elements main, header, footer, section, article, nav, aside, details, summary, figure, time, title -->
+    <main>
+        <nav>
+            <li><a href="home">Home</a></li>
+            <li><a href="Us">Us</a></li>
+            <li><a href="contact">Contact</a></li>
+        </nav>
+
+        <figure></figure>
+
+        <section>
+            <h1>VIRAJ</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusamus ut nulla dolorum impedit nobis deserunt voluptas esse magnam accusantium iste,
+            eligendi vero tempore fuga doloremque labore aliquam quaerat asperiores illo reiciendis autem blanditiis.
+             Molestias, necessitatibus! Itaque vero hic dolorem odio omnis eaque error magnam,
+            est et accusantium eligendi laboriosam iusto quia aperiam qui aliquid earum vel inventore animi adipisci!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio vitae voluptates do
+            lorem, laborum nam placeat, vel quisquam reprehenderit corrupti minus magni sunt ducimus error maiores, eveniet id cul
+            pa nesciunt ex molestiae autem neque fuga?
+        </section>
+    </main>
+
+    <!-- Emmet Shortcuts -->
+
+    <!-- Table Element -->
+    <h1>Table Element</h1>
+    <h1>Heaviest Birds</h1>
+    <table>
+        <!-- thead represents header of the table -->
+        <thead>
+            <!-- th represents table head heading of a column -->
+            <tr>
+                <th rowspan="2">Bird</th> <!--rowspan spans the size of element by specified number of rows-->
+                <th colspan="2">Weight</th> <!--colspan spans the size of element by specified number of columns-->
+                <th rowspan="2">flighted</th>
+            </tr>
+            <tr>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+        <!-- tbody represents body of the table -->
+        <tbody>
+            <!-- tr represents row in a table -->
+            <tr> 
+                <td>Ostrich</td> <!--td represents a cell in table -->
+                <td>240</td>
+                <td>kg</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td>Ostrich</td> <!--td represents a cell in table -->
+                <td>240</td>
+                <td>kg</td>
+                <td>True</td>
+            </tr>
+        </tbody>
+        <!-- tfoot represents footer of the table -->
+        <tfoot>
+
+        </tfoot>
+    </table>
+
+
+    <!-- Form Element -->
+    <h1>Form Element in HTML</h1>
+    <!-- action declares the path , where we will be directed after submitting the form -->
+    <form action="\digvijay"> 
+        <p>
+            <!-- labels are used to connect input with some text by using id attribute  -->
+            <label for="username">Type your username</label>
+            <input type="text"  id="username" placeholder="kahi pn" name="username">
+        </p>
+        <p>
+        <!-- input element takes input from user depending upon the type atrribute -->
+        <!-- placeholder atrribute sets default text in input box -->
+        <label for="password">Type your username</label>
+        <input type="password" id="password" name="password">
+        </p>
+        <p>
+        <label for="color">Type your username</label>
+        <input type="color" id="color">
+        </p>
+        <p>
+        <label for="date">Type your username</label>
+        <input type="date" id="date">
+        </p>    
+        <!-- button submit leads to the link in action attribute of form element  -->
+        <button>Submit</button>
+        <!-- we can also create a button using input tag submit/button-->
+        <input type="submit" value="Input button">
+    </form>
+
+    <!-- Button Element -->
+    <!-- We can have buttons either inside a form or outside a form -->
+    <!-- the default behaviour of button inside a form is submit  -->
+    <!-- the button outside the form can be managed using javascript -->
+    <button>Outside of Form</button>
+
+    <!-- Searching on different sites using action attribute, name attribute, form element and button element -->
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search on Google</button>
+    </form>
+
+    <form action="https://www.reddit.com/search/">
+        <input type="text" name="q" >
+        <input type="text" name="o" >
+        <button>Search on Reddit</button>
+        
+    </form>
+
+    <!-- Radio Buttons , Checkboxes , Selects -->
+    <h1>More Inputs</h1>
+    <h3>Checkboxes</h3>
+    <form action="/result_lagla">
+        <input type="checkbox" name="select1" id="select1" checked>
+        <!-- <input type="checkbox" name="select1" id="select1" checked> -->
+        <label for="select1">Select1</label>
+        
+        <h3>Radio Buttons</h3>
+        <!-- In a group of Radio Buttons we can select only one of them -->
+        <!-- we can group radio buttons using same name attribute -->
+        <p>
+            <label for="xs">XS:</label>
+            <!-- /result_lagla?select1=on&radio1=xs -->
+            <input type="radio" name="radio1" id="xs" value="xs"> 
+            <label for="m">M:</label>
+            <input type="radio" name="radio1" id="m">
+            <label for="l">L:</label>
+            <input type="radio" name="radio1" id="l">
+        </p>
+        
+        <h3>Select</h3>
+        <!-- acts as a dropdown -->
+        <label for="meal">Please select a dish you want to eat : </label>
+        <select name="meal" id="meal">
+            <option value="basundi">basundi</option>
+            <option value="vada pav">vada pav</option>
+            <option value="khir" selected>khir</option>
+            <option value="pohe">pohe</option>
+        </select>
+        <button>Submit</button>
+    </form>
+
+    <!-- Range and Text Area -->
+    <h3>Range</h3>
+    <form action="\invisible">
+        <label for="volume">Volume</label>
+        <input type="range" name="volume" id="volume" min="0" max="100" value="70" step="5">
+        
+        <h3>Text Area</h3>
+        <label for="story">Tell your story : </label>
+        <br>
+        <textarea name="story" id="story" cols="30" rows="10" placeholder="Tell Your Story!!!!"></textarea>
+        <br>
+        <button>Submit</button>
+
+    </form>
+
+    <h1>Validation Demonstration</h1>
+    <form action="\Demo_Valid">
+        <label for="first">Enter first Name : </label>
+        <input type="text" name="first" id="first" required>
+        <br>
+        <label for="username">Username : </label>
+        <input type="text" name="username" id="username" required minlength="5" maxlength="20">
+        <br>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
+
+<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam excepturi laborum vel omnis quae sed earum aut aliquam,
+voluptates voluptatum dolores, <b>opening tag used bold element closing tag</b>
+<p><b> opening tag paragraph</b> element voluptate eum eveniet! Fuga repellendus totam ex corrupti repellat! Lorem ipsum
+    dolor sit amet consectetur adipisicing elit. Laborum, at ducimus iure a saepe deserunt quaerat ipsam ab ad deleniti
+    aperiam commodi in impedit fugiat itaque officiis dolorem quos, doloribus explicabo nesciunt <b>closing tag</b></p>
+similique eligendi consequatur veniam. Deserunt, debitis molestiae vitae nostrum architecto accusantium quaerat beatae,
+error necessitatibus dolore eligendi, similique ex nisi mollitia? Atque debitis suscipit explicabo architecto, enim
+deleniti.
+<h1>opening tag heading element closing tag</h1>
+<h2>h2 , h3 , h4 , h5 , h6 </h2> -->
+
+<!-- HTML Elements -->
+
+
+
+<!-- use shortcut "!" for BoilerPlate -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html> -->
