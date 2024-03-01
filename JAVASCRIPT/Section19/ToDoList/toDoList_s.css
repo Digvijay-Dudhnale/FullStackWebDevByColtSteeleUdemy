@@ -1,0 +1,36 @@
+body{
+    background-color: #6c757d;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#instruction{
+    margin: 50px;
+    background-color: aqua;
+} 
+#heading{
+    margin: 50px;
+    background-color: brown;
+}
+#commands{
+    margin: 50px;
+    background-color: blueviolet;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+/* h1 h2 ul{
+    display: block;
+} */
