@@ -195,3 +195,55 @@ console.log(isChild(5)) ;
 const isAdult = makeBetweenFunc(19,40) ;
 console.log(isAdult(40)) ;
 console.log(isAdult(90)) ;
+
+
+// METHODS --->>>> functions and objects
+// we can add functions as properties on objects
+// we call them methods
+console.log("Methods in JS---->>>>")
+const myMath={
+    multiply:function (x,y){
+        return x*y ;
+    },
+    divide:function (x,y){
+        return x/y ;
+    },
+    square:function (x){
+        return x*x ;
+    },
+    // another syntax
+    cube(x){
+        return x**3 ;
+    }
+}
+
+console.log(myMath.multiply(7,9));
+console.log(myMath["multiply"](8,9)) ;
+console.log(myMath.cube(5)) ;
+
+// THIS keyword
+console.log("'this' keyword ---->>>>") ;
+const cat={
+    name:"manjar",
+    color:"narangi",
+    breed:"gavaran",
+    meow:function(){
+        console.log(`'this' keyword refers to `, this) ;
+        console.log(`${this.name} says MEOWWWW!`) ;
+        console.log("Meow MEow MEOw MEOW!") ;
+    }
+}
+// the value of "this" depends on the invocation context of the function it is used in
+cat.meow() ;
+const meow2 = cat.meow ;
+meow2() ;
+
+// Handling errors in JS files
+// use try-catch statement
+console.log("Catching errors using try-catch statement") ;
+try{
+    console.log("hello".toUpperCase()) ;
+}
+catch{
+    console.log("Error") ;
+}
