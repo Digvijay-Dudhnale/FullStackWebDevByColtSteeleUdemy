@@ -139,3 +139,90 @@ flag = words.some(word => {
     return word[0]==="d" ;
 })
 console.log(flag) ;
+
+// REDUCE function 
+// Executes a reducer function on each element of the array resulting in a single element at the end
+// syntax 
+// [array].reduce((accumulator,currentvalue) => {
+//     return accumulator + currentvalue ;
+// }) ;
+// 
+// the value we return from each iteration is get stored in firstParameter(accumulator)
+console.log("reduce Method------->>>>>>>>") ;
+const sumOfAllElements = numbers.reduce((accumulator,currentValue) => {
+    // console.log(accumulator) ;
+    // console.log(currentValue) ;
+    return accumulator+currentValue ;
+})
+console.log(sumOfAllElements) ;
+console.log(numbers) ; // Does not change original array
+
+const prices = [99,24,56,33,13,7,67,1] ;
+const lowestPrice = prices.reduce(function lowest (lp,lp1){
+    if(lp<lp1)
+        return lp ;
+    return lp1 ;
+})
+console.log(lowestPrice) ;
+
+const highestRated = movies.reduce((currentMovie,nextMovie) => {
+    if(currentMovie.ratings > nextMovie.ratings) 
+        return currentMovie ;
+    return nextMovie ;
+})
+console.log(highestRated.title) ;
+
+
+// Arrow functions and 'this' keyword
+// Inside arrow function 'this' keyword refers to the scope it is created in bydefault all methods are declared in "WINDOW" object
+console.log("arrow function and 'this' keyword----->>>>>>>")
+const person = {
+    fristName:"Digvijay",
+    lastName:"Dudhnale",
+    fullName: function (){
+        console.log(this) ;
+        return `${this.fristName} ${this.lastName}` ;
+    }
+}
+let fullName = person.fullName() ;
+console.log(fullName) ;
+
+const personArrow = {
+    fristName:"Digvijay",
+    lastName:"Dudhnale",
+    fullName: () => {
+        console.log(this) ;
+        return `${this.fristName} ${this.lastName}` ;
+    }
+}
+fullName = personArrow.fullName() ;
+console.log(fullName) ;
+
+// let firstName = "Tanaji" ;
+// let lastName = "Malusare" ;
+const person1 = {
+    fristName:"Digvijay",
+    lastName:"Dudhnale",
+    // fullName: () => {
+    //     // console.log(this) ;
+    //     return `${this.fristName} ${this.lastName}` ;
+    // },
+    fullName: function () {
+        // console.log(this) ;
+        return `${this.fristName} ${this.lastName}` ;
+    },
+    // shoutName: function() {
+    //     setTimeout( function () { // here this refers to winodow object
+    //         console.log(this) ;
+    //         console.log(this.fullName()) ;
+    //     },3000)
+    // },
+    shoutName: function() {
+        setTimeout(()=>{ // here this refers to person1 object
+            console.log(this) ;
+            console.log(this.fullName()) ;
+        },3000)
+    }
+}
+fullName = person1.shoutName() ;
+console.log(fullName) ;
