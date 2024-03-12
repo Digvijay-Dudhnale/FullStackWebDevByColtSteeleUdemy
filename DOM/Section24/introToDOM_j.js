@@ -18,11 +18,13 @@
 
 // 1. getElementById()
 // returns object
+console.log("getElementById()---->>>>>") ;
 const banner = document.getElementById("banner") ; // banner is a object in DOM with bunch of properties
 console.dir(banner) ;
 
 // 2. getElementsByTagName()
 // returns HTMLcollection of objects
+console.log("getElementByTagName()------>>>>>>") ;
 const allImages = document.getElementsByTagName("img") ; // allImages is a HTMLCollection conataining Elements
 console.dir(allImages) ;
 console.dir(allImages[2]) ;
@@ -33,6 +35,7 @@ for(let img of allImages){
 
 // 3. getElementsByClassName()
 // returns HTMLcollection of objects
+console.log("getElementByClassName()---->>>>>>") ;
 const images = document.getElementsByClassName("square") ; // images is a HTMLCollection containing Elements
 console.dir(images) ;
 console.dir(images[0]) ;
@@ -47,6 +50,7 @@ for(let img of images){
 // tag - ("tagName")
 // id - ("#idName")
 // class - (".className")
+console.log("querySelector()------->>>>>>>>") ;
 let image = document.querySelector("img:nth-of-type(3)") ;
 console.dir(image) ;
 image = document.querySelector("#banner") ;
@@ -60,6 +64,98 @@ console.dir(anchor) ;
 // 5. querySelectorAll()
 // it selects all elements
 // it returns nodeList of elements
+console.log("querySelectorAll()------->>>>>>>>") ;
 let tocText = document.querySelectorAll(".toctext") ;
 console.dir(tocText) ;
 console.dir(tocText[0]) ;
+
+
+
+// DOM Manipulation
+// Properties and Methods
+// 1. classList 2. getAttribute() 3. setAttribute() 4. appendChild() 5. append() 6. prepend()
+// 7. removeChild() 8. remove() 9. createElement 10. innerText 11. textContent 12. innerHTML
+// 13. value 14. parentElement 15. children 16. nextSibling 17. previousSibling 18. style
+
+// 1. innerText
+// we can only manipulate the text inside element we are accessing
+console.log("innerText()----->>>>>>") ;
+console.log(document.querySelector('p').innerText) ;
+// document.querySelector('p').innerText = "Jay Shriram" ;
+// console.log(document.querySelector('p').innerText) ;
+let allLinks = document.querySelectorAll('ul a') ;
+for(let link of allLinks){
+    link.innerText = "I am a Link!" ;
+} 
+
+// 2. innerHTML
+// we can manipulate whole html inside element we are accessing
+console.log("innerHTML()----->>>>>>") ;
+let para = document.querySelector('p') ;
+// console.dir(para) ;
+document.querySelector('p').innerHTML = "<i>Using InnerHTML</i>" ;
+console.dir(para) ;
+
+// NOTE -->> if you don't want to over write the content present inside the element use += insetead of =
+
+// Attributes id,class,type,value,etc.
+// document.querySelector('#banner').id = "notBanner" ; // changed id of image from banner to notBanner
+
+// 3. getAttribute()
+// returns name of attribute or null
+console.log("getAttribute()----->>>>>>") ;
+console.log(image.getAttribute('class')) ;
+
+// 4. setAttribute()
+// sets a new value to existing attribute
+let input = document.querySelector('input[type="text"]') ;
+console.log(input.type) ;
+console.log("setAttribute()----->>>>>>") ;
+// input.type = "password" ;
+input.setAttribute('type','password') ;
+console.log(input.type) ;
+
+// 5. style
+console.log("style--------->>>>>>>>>>>") ;
+let heading = document.querySelector('h1') ;
+heading.style.color = "red" ;
+heading.style.backgroundColor = "purple" ;
+console.dir(heading.style) ;
+console.log(window.getComputedStyle(heading).margin) ;
+
+// 6. classList
+console.log("classList------>>>>>>>>>>") ;
+heading = document.querySelector('h2') ;
+// heading.setAttribute('class','purple') ;
+heading.setAttribute('class','border') ;
+let className = heading.getAttribute('class') ;
+// let className = heading.class ; // doesn't work returns undefined
+console.log(className) ;
+// console.log(heading.class) ;
+heading.setAttribute('class',`${className} purple`) ;
+console.log(heading.classList) ;
+// heading.classList.add('className') ;
+// heading.classList.remove('className') ;
+// heading.classList.toggle('className') ;
+// heading.classList.contains('className') ;
+
+// 7. Traversing parent/sibling/children
+console.log("Traversing parent/sibling/children------->>>>>>>") ;
+// 1. parentElement
+console.log("parentElement------->>>>>>") ;
+let firstBold = document.querySelector('b') ;
+console.log(firstBold) ;
+let parentFirstBold = firstBold.parentElement ;
+// console.log(`parnet element of firstBold is ${parentFirstBold}`) ;
+console.log(parentFirstBold) ;
+parentFirstBold = firstBold.parentElement.parentElement ;
+console.log(parentFirstBold) ;
+
+// 2. children / childElement / nextElementSibling / previousElementSibling
+console.log("children----->>>>>>") ;
+let paragraph = firstBold.parentElement ;
+console.dir(paragraph.children) ;
+let imageSquare = document.querySelector(".square") ;
+console.log(imageSquare.nextElementSibling) ;
+console.log(imageSquare.previousElementSibling) ;
+
