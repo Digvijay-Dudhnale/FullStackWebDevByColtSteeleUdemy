@@ -159,3 +159,29 @@ let imageSquare = document.querySelector(".square") ;
 console.log(imageSquare.nextElementSibling) ;
 console.log(imageSquare.previousElementSibling) ;
 
+
+// 8. createElement() / appendChild() / append() / prepend() / insertAdjacentElement()
+// creates new element and adds it to the page
+console.log("createElement()----->>>>>>") ;
+const newImage = document.createElement('img') ;
+newImage.src = 'https://images.unsplash.com/photo-1580980407668-6bb45a674180?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBpZ2VvbnxlbnwwfHwwfHx8MA%3D%3D' ;
+console.log("appendChild()------>>>>>>>>") ;
+document.body.appendChild(newImage) ;
+newImage.classList.add('square') ;
+console.log("append()-------->>>>>>>>>") ;
+para = document.querySelector('p') ;
+para.append(" I am new text!!!! appended using append()") ;
+console.log("prepend()------->>>>>>>>>") ;
+para.prepend("I am prepended text!!!! using prepend(). ") ;
+console.log("insertAdjacentElement()------>>>>>>>") ;
+let mainHeading = document.querySelector('h1') ;
+let newh2 = document.createElement('h2') ;
+newh2.append("Are adorable chickens!!!") ;
+mainHeading.insertAdjacentElement("afterend",newh2) ;
+
+// 9. removeChild() / remove()
+// remove element from the page
+console.log("removeChild()------->>>>>>>>>") ;
+// document.body.removeChild(para) ;
+console.log("remove------>>>>>>>") ;
+// newImage.remove() ;
