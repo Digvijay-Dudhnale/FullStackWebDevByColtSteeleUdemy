@@ -2,6 +2,8 @@
 // clicks, drags, drops, hovers, scroll, form submission, key presses, focus/blur
 // mouse wheel, double click, copying, pasting, audio start, screen resize, printing
 
+// MOUSE EVENTS--->>>
+
 // Onclick event
 console.log("onclick event----->>>>>>>") ;
 let btn = document.querySelector('#v2') ;
@@ -44,3 +46,33 @@ function twist(){
 tasButton.addEventListener('click',shout) ;
 tasButton.addEventListener('click',twist) ;
 // tasButton.addEventListener('click',shout,{once:true}) ;
+
+
+// KEYBOARD EVENTS---->>>>
+
+let keyBtn = document.querySelector('#v4') ;
+keyBtn.addEventListener('click',function(evt){
+    console.log(evt) ;
+    // evt is Event Object which automatically gets created
+})
+let inp = document.querySelector('#inp1') ;
+// inp.addEventListener('keyup',function(){
+//     console.log("KEYUP") ;
+// })
+inp.addEventListener('keydown',function(evt){
+    // console.log("KEYDOWN") ;
+    // console.log(evt) ;
+    // console.log(evt.key) ;
+    // console.log(evt.code) ;
+    switch(evt.code){
+        case 'ArrowUp':
+            console.log("UP!") ;
+            break ;
+        case 'ArrowDown' :
+            console.log("DOWN!") ;
+            break ;
+        default :
+            console.log(evt.key) ;
+            console.log(evt.code) ;
+    }
+})
