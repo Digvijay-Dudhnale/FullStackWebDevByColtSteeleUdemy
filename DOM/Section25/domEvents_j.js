@@ -76,3 +76,25 @@ inp.addEventListener('keydown',function(evt){
             console.log(evt.code) ;
     }
 })
+
+
+// FORM EVENTS ----->>>>>
+// while accessing elements inside a form we can use form property instead accessing elements by using querySelector method
+// form_object.elements.element_name will do this for us
+
+let form = document.querySelector('#shelterForm') ;
+// let inp1 = document.querySelector('#catName') ;
+let inp1 = form.elements.catName ;
+let list = document.querySelector('#cats') ;
+form.addEventListener('submit',function(e){
+    e.preventDefault() ; // this prvents default behaviour of browser when the event occurs
+    // console.log("Form Submitted") ;
+    let catName = inp1.value ;
+    let newLi = document.createElement('li') ;
+    newLi.innerText = catName ;
+    list.appendChild(newLi) ;
+    // list.append(newLi) ;
+    inp1.value = "" ;
+    // console.log(newLi) ;
+    // console.log(inp1.value) ;
+})
