@@ -98,3 +98,18 @@ form.addEventListener('submit',function(e){
     // console.log(newLi) ;
     // console.log(inp1.value) ;
 })
+
+
+// CHANGE AND INPUT EVENTS ------>>>>>>
+let inp2 = document.querySelector('#inpChan') ;
+// inp2.addEventListener('change',function(e){
+//     e.preventDefault() ;
+//     console.log("Jay Shree Ram!!") ;
+//     console.log(inp2.value) ;
+// })
+
+let head1 = document.querySelector('#inpChanH3') ;
+inp2.addEventListener('input',function(e){
+    e.preventDefault() ;
+    head1.innerText = inp2.value ;
+})

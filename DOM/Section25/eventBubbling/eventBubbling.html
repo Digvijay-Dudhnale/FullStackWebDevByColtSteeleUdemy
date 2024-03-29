@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- // Event Bubbling is when we want to trigger the event for particular element
+// but along with it the same events of it's parent elements also get triggered -->
+    <section onclick="alert('Section Clicked!')">
+        <p onclick="alert('Paragraph Clicked!')">
+            <button onclick="alert('Button Clicked!')">Click</button>
+        </p>
+    </section>
+
+    <div id="container">
+        Click to Hide
+        <button id="btn">Change Color</button>
+    </div>
+
+
+    <script src="eventBubbling_j.js"></script>
+</body>
+</html>
