@@ -220,8 +220,8 @@ let delayedColorChange = (newColor) =>{
     return new Promise((resolve,reject)=>{
         setTimeout(() => {
             divCallbackHell.style.backgroundColor = newColor ;
-            resolve(newColor)
-        }, 2000);
+            resolve(newColor) ;
+        }, 3000);
     })
 }
 delayedColorChange('red')
@@ -240,3 +240,103 @@ delayedColorChange('red')
     .then((data)=>{
         // divCallbackHell.style.backgroundColor = data ;
     })
+
+
+
+// ASYNC Functions
+// --->>> A newer and cleaner syntax for working with async code. Syntax "makeup" for promises
+// async - keyword
+// -->> the async keyword is used to declare asynchronous functions
+// -->> Async function always return a promise
+// -->> if the function returns value the promise will be resolved with that value
+// -->> if the function returns exception the promise will be rejected
+    // async function demoFun (){
+    //     return "jay bhairav" ;
+    // }
+    // console.log(demoFun() );
+    // async function demoFun() {
+    //     throw new Error("Oh No Error") ;
+    //     throw "Oh Error" ;
+    // }
+    // console.log(demoFun()) ;
+const login = async (username,password) =>{
+    // setTimeout(() => {
+        if(!username || !password) throw "Missing Credentials" ;
+        return "Logged in Successfully" ;
+    // }, 2000);
+}
+// console.log(login('mid','journey')) ;
+    // --->>> following code do not work properly with setTimeout() bcoz asynchronous function must explicitly return promise(resolve,reject)
+login("ram","ram")
+    .then((msg)=>{
+        console.log("Welcome!") ;
+        console.log(msg) ;
+    })
+    .catch((msgErr)=>{
+        console.log("Sorry") ;
+        console.log(msgErr) ;
+    })
+
+// await - keyword
+// -->> it will pause the execution of async function and wait for promise to be resolved before continuing on
+// -->> it can only mainly used inside the functions declared with async keyword
+
+let asyncAwait = document.querySelector('#asyncAwait') ;
+let delayedRainbow = (newColor) =>{
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            asyncAwait.style.backgroundColor = newColor ;
+            resolve(newColor) ;
+        }, 3000);
+    })
+}
+async function rainbow(){
+    await delayedRainbow('violet') ;
+    await delayedRainbow('indigo') ;
+    await delayedRainbow('blue') ;
+    await delayedRainbow('yellow') ;
+    await delayedRainbow('orange') ;
+    await delayedRainbow('green') ;
+    await delayedRainbow('red') ;
+    return "all done" ;
+}
+    // let rain = rainbow().then(()=>{
+    //     console.log("All Rainbow Completed") ;
+    // }) ;
+async function startRainbow(){
+    let rain = await rainbow() ;
+    console.log("All Rainbow Completed") ;
+}
+startRainbow() ;
+
+// Handling Errors in Async Functions --- when promise is rejected
+// We use try and catch to handle this if not used the execution further code will stop
+function asyncErrorDemo(url){
+    return new Promise((resolve,reject)=>{
+        let delay = Math.floor(Math.random() * 4500) + 501 ;
+        setTimeout(() => {
+            if(delay > 2000){
+                reject("Error Occurred") ;
+            }
+            else{
+                resolve(`The content from your page is ${url} `) ;
+            }
+        }, delay);
+    });
+}
+
+async function tryCatch (){
+    try{
+        let data1 = await asyncErrorDemo('book1') ;
+        console.log(data1) ;
+        let data2 = await asyncErrorDemo('book2') ;
+        console.log(data2) ;
+    }
+    catch(error){
+        console.log("Its Ok...") ;
+        console.log(error) ;
+    }
+    console.log("ram ram ram ram ram") ; // this will not run if don't use try-catch and error occurs
+}
+
+tryCatch() ;
