@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV maze API</title>
+</head>
+<body>
+    
+    <h1>TV Show Search</h1>
+    <form action="" id="searchForm">
+        <label for="search">Enter Tv Show name : </label>
+        <input type="text" name="search" id="search" placeholder="TV show name">
+        <button id="submit">Results</button>
+    </form>
+    <div id="shows">
+        <ul id="showNames"></ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="tvmaze_api_j.js"></script>
+</body>
+</html>
