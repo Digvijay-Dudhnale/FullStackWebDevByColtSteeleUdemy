@@ -74,3 +74,50 @@ async function People(){
 } 
 
 People() ;
+
+
+// AXIOS
+// --->>> A library for making http requests
+
+    // let axios_var = axios.get("https://swapi.dev/api/people/3/") ;
+    // axios_var.then((data)=>{
+    //     console.log(data.data.skin_color) ;
+    // })
+
+async function axiosDemoStarwarPerson(){
+    try{
+        let axios_var = await axios.get("https://swapi.dev/api/people/3/") ;
+        console.log(axios_var.data.skin_color) ;
+    }
+    catch(e){
+        console.log("Error", e) ;
+    }
+}
+axiosDemoStarwarPerson() ;
+
+
+const jokesButton = document.querySelector('#jokesButton') ;
+const jokes = document.querySelector('#jokes') ;
+const getDadJoke = async ()=>{
+    const config = {headers : {Accept:"application/json"}} ;
+    const res = await axios.get("https://icanhazdadjoke.com/" , config) ;
+    // console.log(res.data.joke) ;
+    // return res ;
+    const newLi = document.createElement('li') ;
+    newLi.innerText = res.data.joke ;
+    jokes.append(newLi) ;
+}
+jokesButton.addEventListener('click',function(){
+// let res = getDadJoke() ;
+    getDadJoke() ;
+})
+
+// getDadJoke() ;
+        // const jokesButton = document.querySelector('#jokesButton') ;
+        // const jokes = document.querySelector('#jokes') ;
+        // jokesButton.addEventListener('click',function(){
+        //     const newLi = document.createElement('li') ;
+        //     let res = getDadJoke() ;
+        //     newLi.innerText = res.data.joke ;
+        //     jokes.append(newLi) ;
+        // })
