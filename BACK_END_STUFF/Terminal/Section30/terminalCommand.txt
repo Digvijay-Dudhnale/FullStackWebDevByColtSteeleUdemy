@@ -1,0 +1,37 @@
+start git bash
+
+1 --->>> ls - list
+    a> lists the content of curren directory/folder in which we are at present moment
+    b> ls
+
+2 --->>> pwd - print working directory
+    a> prints the path of current working directory
+    b> pwd
+
+3 --->>> cd - change directory
+    a> used to navigate through folder/directories
+    b> To move forward - cd directory_name/directory_name/ 
+    c> To move backward - cd ../../
+
+4 --->>> Absolute Path vs Relative Path
+    a> if we provide Absolute Path to cd command we can navigate to that location from any location
+       it starts with /
+    b> if we provide Relative Path to cd command we can only navigate the locations which are immediate parent or child to current location
+       / is optional at the start
+
+5 --->>> mkdir - make directory 
+    a> used to create folders/directories
+    b> mkdir path/folder_name folder_name
+
+6 --->>> ls --help
+
+7 --->>> touch
+    a> used to create new files
+    b> changes modification time of already exitsting files
+
+8 --->>> rm and rmdir - used to remove files and used to remove directories
+    a> rm file_name
+    b> rmdir directory_name
+    c> directory must be empty
+
+9 --->>> flags 
