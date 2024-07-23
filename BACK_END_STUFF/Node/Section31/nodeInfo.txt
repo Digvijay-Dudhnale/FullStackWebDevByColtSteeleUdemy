@@ -1,0 +1,95 @@
+Installation
+The node REPL
+running node files
+Process and argv
+File System Module
+
+--->>> node-js is a javascript runtime we can write serverside-code
+
+--->>>What we can do with it 
+
+    Web Servers
+    Command line tools
+    Native apps eg.vsCode using electron
+    video games 
+    drone software and many more
+
+....We can't access the DOM or manipulate it using node
+    the global scope in node is called "global" unlike 'window' in browser
+
+    > global
+        <ref *1> Object [global] {
+        global: [Circular *1],
+        clearImmediate: [Function: clearImmediate],
+        setImmediate: [Function: setImmediate] {
+            [Symbol(nodejs.util.promisify.custom)]: [Getter]
+        },
+        clearInterval: [Function: clearInterval],
+        clearTimeout: [Function: clearTimeout],
+        setInterval: [Function: setInterval],
+        setTimeout: [Function: setTimeout] {
+            [Symbol(nodejs.util.promisify.custom)]: [Getter]
+        },
+        queueMicrotask: [Function: queueMicrotask],
+        structuredClone: [Function: structuredClone],
+        atob: [Getter/Setter],
+        btoa: [Getter/Setter],
+        performance: [Getter/Setter],
+        fetch: [Getter/Setter],
+        crypto: [Getter]
+        }
+    >
+
+------>>>>
+
+    to start node type "node" in terminal
+    to exit node type ".exit" / "ctrl + c"
+
+---->>>REPL
+
+    Read
+    Evaluate
+    Print
+    Loop
+
+------->>>>>Creating file and running file
+    To execute the file we must provide full path to the file or must be in folder where the file is
+
+    touch firstScript.js
+
+    node firstScript.js
+        Jay Shree Ram!
+        Jay Shree Ram!
+        Jay Shree Ram!
+        Jay Shree Ram!
+        Jay Shree Ram!
+        Jay Shree Ram!
+        Jay Shree Ram!
+        Jay Shree Ram!
+        Jay Shree Ram!
+        Jay Shree Ram!
+
+----->>>>>Process
+    process object is a global that provides information about and control over current Node.js process
+    as a global it is always available to Node.js applications without using require()
+
+    $ node args.js
+        Hello from ARGS file
+
+    Haridas@Rising-Sun MINGW64 /d/github/WebDevColtUdemy/BACK_END_STUFF/Node/Section31 (23rdjul2024)
+    $ node args.js
+        Hello from ARGS file
+        [
+            'C:\\Program Files\\nodejs\\node.exe',
+            'D:\\github\\WebDevColtUdemy\\BACK_END_STUFF\\Node\\Section31\\args.js'
+        ]
+
+    Haridas@Rising-Sun MINGW64 /d/github/WebDevColtUdemy/BACK_END_STUFF/Node/Section31 (23rdjul2024)
+    $ node args.js Digvijay Dudhnale
+        Hello from ARGS file
+        [
+            'C:\\Program Files\\nodejs\\node.exe',
+            'D:\\github\\WebDevColtUdemy\\BACK_END_STUFF\\Node\\Section31\\args.js',
+            'Digvijay',
+            'Dudhnale'
+        ]    
