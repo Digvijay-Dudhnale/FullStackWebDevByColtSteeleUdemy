@@ -1,0 +1,14 @@
+---->>>> Crucial
+
+Module.exports
+Requiring Modules
+Using NPM
+Installing Packages
+Creating package.json file
+
+---->>>> Nice to have
+
+The Dad Joke package
+Rainbow package
+The figlet package
+franc package
